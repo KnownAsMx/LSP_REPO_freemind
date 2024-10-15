@@ -1,4 +1,3 @@
-
 package org.howard.edu.lsp.assignment2;
 
 import java.io.IOException;
@@ -10,14 +9,13 @@ import java.util.Scanner;
 public class Word_Counting {
 	
 	public static void main(String[] args) throws IOException {
-        //Create relative file path, input scanner 
-	
-	
+		
+        //Establish relative file path, input scanner 
         FileInputStream fin = new FileInputStream("src/Words.txt");
         Scanner FileInput = new Scanner(fin, "UTF-8");
-        // .useDelimiter method allows the creation of separate tokens for non-word characters
-        FileInput.useDelimiter("\\W+");
         
+        // .useDelimiter method allows the creation of separate tokens for non-word characters.
+        FileInput.useDelimiter("\\W+");
         
         
         //Create ArrayList
