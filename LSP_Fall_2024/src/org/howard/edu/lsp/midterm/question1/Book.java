@@ -1,15 +1,13 @@
 package org.howard.edu.lsp.midterm.question1;
 
-import org.howard.edu.lsp.midterm.Book;
-import org.howard.edu.lsp.midterm.and;
 
 public class Book {
 
 	public static void main(String[] args) {
 		
 	}
-		private String title,
-		Private String author1, ISBN;
+		private String title;
+		private String author1, ISBN;
 		private int yearPublished;
 		
 		
@@ -19,18 +17,25 @@ public class Book {
 	        this.ISBN = ISBN;
 	        this.yearPublished = yearPublished;	
 		}
-	        
+		/**
+		 * method for checking if two books are equal
+		 */
+		//cited from example 2 in geeks for geeks
 	    public boolean equals(Object obj) {
 	    	if (this == obj) return true;
-	    }	else if (obj == null || !(obj instanceof Book)) return false; 
+	        if (obj == null || !(obj instanceof Book)) return false; 
 	    	Book other = (Book) obj;
-	    	return ISBN.equals(other.ISBN) and author.equals(.author);
+	    	return ISBN.equals(other.ISBN) & author1.equals(other.author1);
 	    	
+}	
+/**
+ * returns representation of book details
+ */
 	    public String toString() {
 	           return "Book Title: " + title + ", Author: " + author1 + ", ISBN: " + ISBN + ", Year Published: " + yearPublished;
 	    	
 	}
 }
-}
 
-}
+
+
